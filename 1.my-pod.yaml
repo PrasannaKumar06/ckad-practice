@@ -1,0 +1,15 @@
+apiVersion: v1 
+kind: Pod 
+metadata: 
+  name: my-app-pod 
+  labels: 
+    app: myapp 
+    type: front-end 
+spec:
+   containers: 
+      - name: nginx-container 
+        image: nginx 
+
+# k run my-app-pod --image=nginx
+# Now change the image on this pod to redis
+# k set image pod redis redis=redis
